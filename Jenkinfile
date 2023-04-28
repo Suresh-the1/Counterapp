@@ -1,0 +1,14 @@
+pileline{
+
+       agent any
+
+       stages
+       {
+            stage('Git checkout')
+                   steps{
+                        script{
+                           sh "git credentialsId: 'Git_Credentials', url: 'https://github.com/Suresh-the1/Counter_application-main.git'"
+                        }
+                   } 
+       }
+}
